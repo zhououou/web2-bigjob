@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Document</title>
+
+<link type="text/css" href="css/style.css" rel="stylesheet" />
+
+<script type="text/javascript" src="js/tools.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+
+</head>
+<body>
+<div class="header"><img src="images/loge1.jpg"></div>
+<ul class="hua">
+	<li><a href="" onclick="big()">Introduce</a></li>
+	<li><a href="">Theme</a></li>
+	<li><a href="">More about it</a></li>
+	<li><a href="">Mypages</a></li>
+</ul>
+<div class="wrap" id="wrap">
+	<ul class="content"></ul>
+	<a href="javascript:;" class="prev">&#60;</a>
+
+	<a href="javascript:;" class="next">&#62;</a>
+</div>
+	<div id="text"></div>
+	<div id="imgs"><img src="images/loge2.jpg"></div>
+	<script>
+		function big(){
+		}
+		var divTyping=document.getElementById("text");
+		var i=0;
+		var timer=0;
+		var str="Never let the demands of tomorrow interfere with the pleasures and excitement of today."+"<br>"+"<br>"+"       "+"Life is so beautiful that we can not miss anything"+"<br>"+"<br>"+"       "+"Let us enjoy the happiness in our life";
+   			function typing(){
+			if(i<str.length){
+				divTyping.innerHTML=str.slice(0,i++)+"_";
+				timer=setTimeout(typing,200);
+			}
+			else{
+				divTyping.innerHTML=str;
+				clearTimeout(timer);
+			}
+			
+		}
+		typing();
+		//添加鼠标效果滑动
+			var imgId=document.getElementById("imgs");
+			imgId.onmousemove=function(e){
+				// my&imgId.style.left=e.clientX+10+"px";
+				// imgId.style.top=e.clienY+10+"px";
+				var intX = e.clientX;
+  				var intY = e.clientY;
+ 				imgId.style.left= intX+ "px";
+ 				imgId.style.top= intY+"px";
+ 				console.log(intX);
+ 				console.log(intY);
+			};
+		
+	</script>
+
+</body>
+</html>
