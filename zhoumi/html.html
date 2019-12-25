@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<script src="js.js" type="text/javascript"></script>
+	
+</head>
+<body>
+	<div class="homepage" id="homepage">
+		<div class="homeimg" id="homeimg">
+			<div class="imgs" id="imgs">
+				<div class="img"><img src="imgs/03.png"></div>
+				<div class="img"><img src="imgs/01.png"></div>
+				<div class="img"><img src="imgs/02.png"></div>
+				<div class="img"><img src="imgs/03.png"></div>
+				<div class="img"><img src="imgs/01.png"></div>
+			</div>
+			<span id="left"> < </span>
+			<span id="right"> > </span>
+				<ul class="nav" id="nav">
+					<li class="active">____</li>
+					<li>____</li>
+					<li>____</li>
+				</ul>
+		</div>
+		<div class="words" id="words">
+			<p id="word1">Dinner Supper</p>
+			<p id="word2">we'd love to get in touch</p>
+			<div id="word3">
+				<p>222039@qq.com</p>
+				<p>2-018-248POPPLE</p>
+				<p>address. </p>
+				<P>BroadAve.STE.19San Franciaco,CA23580</p>
+			</div>
+			<div id="pic">
+				<img src="imgs/star0.png" title="1" name="0">
+				<img src="imgs/star0.png" title="1" name="0">
+				<img src="imgs/star0.png" title="1" name="0">
+				<img src="imgs/star0.png" title="1" name="0">
+				<img src="imgs/star0.png" title="1" name="0">
+			</div>
+			<textarea cols="30" rows="2" value="" id="txt"></textarea>
+			<button id="btn1">g r a d e</button>
+		</div>
+	
+	</div>
+	<p id="box-w">[分类介绍の方の法]</p>
+	<div class="box2">
+		<div id="box2-left" class="box2-left">
+			<p id="boxleft-1">食材筛选</p>
+			<ul id="boxleft-ul">
+				<li>
+					<span id="boxleft-l">黄瓜</span>
+					<span id="boxleft-r">1709</span>
+				</li>
+				<li>
+					<span id="boxleft-l">牛肉</span>
+					<span id="boxleft-r">1206</span>
+				</li>
+				<li>
+					<span id="boxleft-l">虾</span>
+					<span id="boxleft-r">1206</span>
+				</li>
+				<li>
+					<span id="boxleft-l">南瓜</span>
+					<span id="boxleft-r">1121</span>
+				</li>
+				<li>
+					<span id="boxleft-l">土豆</span>
+					<span id="boxleft-r">1031</span>
+				</li>
+				<li>
+					<span id="boxleft-l">鸡腿</span>
+					<span id="boxleft-r">987</span>
+				</li>
+				<li>
+					<span id="boxleft-l">西红柿</span>
+					<span id="boxleft-r">864</span>
+				</li>
+				<li>
+					<span id="boxleft-l">藕</span>
+					<span id="boxleft-r">649</span>
+				</li>
+				<li>
+					<span id="boxleft-l">白萝卜</span>
+					<span id="boxleft-r">648</span>
+				</li>
+				<li>
+					<span id="boxleft-l">冬瓜</span>
+					<span id="boxleft-r">603</span>
+				</li>
+				<li>
+					<span id="boxleft-l">生菜</span>
+					<span id="boxleft-r">666</span>
+				</li>
+			</ul>			
+		</div>
+		<div id="box2-right">
+			<div id="show1">
+				<img id="img1" src="imgs/10.png">
+				<span class="show hid" id="span1">面类：10元</span>
+			</div>
+			<div id="show2">
+				<img id="img2" src="imgs/11.jpg">
+				<span class="show hid" id="span2">面包：15元</span>
+			</div>
+			<div id="show3">
+				<img id="img3" src="imgs/12.jpg">
+				<span class="show hid" id="span3">五谷类：10元</span>
+			</div>
+
+
+			<div id="show4">
+				<span class="show hid" id="span4">水果：10元</span>
+				<img id="img4" src="imgs/13.jpg">
+			</div>
+			<div id="show5">
+				<img id="img5" src="imgs/14.jpg">
+				<span class="show hid" id="span5">汤类：20元</span>
+			</div>
+			<div id="show6">
+				<img id="img6" src="imgs/15.jpg">
+				<span class="show hid" id="span6">卷饼：10元</span>
+			</div>
+		</div>
+	</div>
+	
+</body>
+<script src="star.js" type="text/javascript"></script>
+<script type="text/javascript">
+	var homeimg=document.getElementById("homeimg");
+	var imgs=document.getElementById("imgs");
+	var oNavlist=document.getElementById("nav").children;
+	var left=document.getElementById("left");
+	var right=document.getElementById("right");
+	var btn1=document.getElementById("btn1");
+
+	var img1=document.getElementById("img1");
+	var img2=document.getElementById("img2");
+	var img3=document.getElementById("img3");
+	var img4=document.getElementById("img4");
+	var img5=document.getElementById("img5");
+	var img6=document.getElementById("img6");
+
+	var span1=document.getElementById("span1");
+	var span2=document.getElementById("span2");
+	var span3=document.getElementById("span3");
+	var span4=document.getElementById("span4");
+	var span5=document.getElementById("span5");
+	var span6=document.getElementById("span6");
+
+	var index=1;    
+	var timer;
+	var isMoving=false;
+	function next(){
+		if(isMoving){
+			return;
+		}
+		isMoving=true;
+		index++;
+		navChange();
+		animate(imgs,{left:-600*index},function(){
+			if(index==4){
+				imgs.style.left="-600px";
+				index=1;
+			}
+			isMoving=false;
+		});
+	}
+
+	function prev(){
+		if(isMoving){
+			return;
+		}
+		isMoving=true;
+		index--;
+		navChange();
+		animate(imgs,{left:-600*index},function(){
+			if(index==0){
+				imgs.style.left="-1800px";
+				index=3;
+			}
+			isMoving=false;
+		});
+	}
+
+	timer=setInterval(next,2000);
+
+	//鼠标划入
+	homeimg.onmouseover=function(){
+		animate(left,{opacity:50});
+		animate(right,{opacity:50});
+		clearInterval(timer);
+	}
+
+	//鼠标划出
+	homeimg.onmouseout=function(){
+		animate(left,{opacity:0});
+		animate(right,{opacity:0});	
+		timer=setInterval(next,2000);	
+	}
+
+	right.onclick=next;
+	left.onclick=prev;
+
+	function navChange(){
+		for(var i=0;i<oNavlist.length;i++){
+			oNavlist[i].className=" ";
+		}
+		if(index==4){
+			oNavlist[0].className="active";
+		}
+		else if(index==0){
+			oNavlist[2].className="active";
+		}
+		else{
+			oNavlist[index-1].className="active";
+		}
+	}
+	btn1.setAttribute("onclick","getscore()");
+	function getscore(){
+		alert("评分成功!");
+	}
+
+	var timer1;
+	img1.onmouseover=function(){
+        startMove(span1,300,timer1);
+        animate(span1,{opacity:100});
+    }
+    img1.onmouseout=function(){
+    	animate(span1,{opacity:0});
+    }
+
+    var timer2;
+	img2.onmouseover=function(){
+        startMove(span2,300,timer2);
+        animate(span2,{opacity:100});
+    }
+    img2.onmouseout=function(){
+    	animate(span2,{opacity:0});
+    }
+
+    var timer3;
+	img3.onmouseover=function(){
+        startMove(span3,300,timer3);
+        animate(span3,{opacity:100});
+    }
+    img3.onmouseout=function(){
+    	animate(span3,{opacity:0});
+    }
+    var timer4
+    img4.onmouseover=function(){
+        startMove(span4,300,timer4);
+        animate(span4,{opacity:100});
+    }
+    img4.onmouseout=function(){
+    	animate(span4,{opacity:0});
+    }
+
+    var timer5;
+	img5.onmouseover=function(){
+        startMove(span5,300,timer5);
+        animate(span5,{opacity:100});
+    }
+    img5.onmouseout=function(){
+    	animate(span5,{opacity:0});
+    }
+
+    var timer6;
+	img6.onmouseover=function(){
+        startMove(span6,300,timer6);
+        animate(span6,{opacity:100});
+    }
+    img6.onmouseout=function(){
+    	animate(span6,{opacity:0});
+    }
+
+    function startMove(object,target,timers){  	
+    	clearInterval(timers);
+    	timers=setInterval(function(){
+    		var speed=0;
+    		if(object.offsetTop<target){
+    			speed=20;
+    		}
+    		else{
+    			speed=-20;
+    		}
+    		if(object.offsetTop==target){
+    			clearInterval(timers);
+    		}
+    		else{
+    			object.style.top=object.offsetTop+speed+"px";
+    		}
+    	},30);
+    }
+</script>
+</html>
