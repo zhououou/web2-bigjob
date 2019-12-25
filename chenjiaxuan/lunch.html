@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lunch</title>
+	<link rel="stylesheet" type="text/css" href="lunch.css">
+</head>
+<body onmousemove="b1()">
+	<div class="top">
+		<h1>Lunch Menu</h1>
+		<img src="imges/小爱心图标.png" class="heart1">
+		<img src="imges/小爱心图标.png" class="heart2">
+		<img src="imges/小爱心图标.png" class="heart3">
+		<img src="imges/小爱心图标.png" class="heart4">
+		<img src="imges/小爱心图标.png" class="heart5">
+	</div>
+	<div class="nav_">
+	<div class="nav">
+		<ul id = "nav">
+			<li class="active">中餐</li>
+			<li >西餐</li>
+			<li >日本料理</li>
+			<li >韩国料理</li>
+			<li >其他</li>
+		</ul>
+	</div>
+	</div>
+	<div class="box" id = 'box'>
+		<div class="slider" id="slider">
+			<div class="slide">
+				<img src="imges/泰国米粉虾仁.jpg">
+			</div>
+			<div class="slide">
+				<img src="imges/泰国虾火锅.jpg">
+			</div>
+			<div class="slide">
+				<img src="imges/东南亚美食（3）.jpg">
+			</div>
+			<div class="slide">
+				<img src="imges/午餐中餐（1）.jpg">
+				<p></p>
+			</div>
+			<div class="slide">
+				<img src="imges/中餐（2）.jpg">
+				<p></p>
+			</div>
+			<div class="slide">
+				<img src="imges/中式点心饺子（3）.jpg">
+				<p></p>
+			</div>
+			<div class="slide">
+				<img src="imges/西式蔬菜冷汤（1）.jpg">
+				<p></p>
+			</div>
+			<div class="slide">
+				<img src="imges/西式披萨（2）.jpg">
+				<p></p>
+			</div>
+			<div class="slide">
+				<img src="imges/西式牛排（3）.jpg">
+				<p></p>
+			</div>
+			<div class="slide">
+				<img src="imges/日本寿司饭团（1）.jpg">
+			</div>
+			<div class="slide">
+				<img src="imges/日本鳗鱼饭（2）.jpg">
+			</div>
+			<div class="slide">
+				<img src="imges/日本天妇罗（3）.jpg">
+			</div>
+			<div class="slide">
+				<img src="imges/韩国泡菜火锅（1）.jpg">
+			</div>
+			<div class="slide">
+				<img src="imges/韩国石锅拌饭（2）.jpg">
+			</div>
+			<div class="slide">
+				<img src="imges/韩式炸鸡（3）.jpg">
+			</div>
+			<div class="slide">
+				<img src="imges/泰国米粉虾仁.jpg">
+			</div>
+			<div class="slide">
+				<img src="imges/泰国虾火锅.jpg">
+			</div>
+			<div class="slide">
+				<img src="imges/东南亚美食（3）.jpg">
+			</div>
+			<div class="slide">
+				<img src="imges/午餐中餐（1）.jpg">
+			</div>
+			<div class="slide">
+				<img src="imges/中餐（2）.jpg">
+				<p></p>
+			</div>
+			<div class="slide">
+				<img src="imges/中式点心饺子（3）.jpg">
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div id = "left" class="foward"><</div>
+	<div id = "right" class="foward">></div>
+	<div class="main">
+		<div class="main-h"><h1>精选食材</h1></div>
+		<div class="main-img">
+			<ul>
+				<li>
+					<img src="imges/虾.jpg" class="imges0" onmouseover="larger(this)" onmouseout="lower(this)"></li>
+				<li><img src="imges/牛肉.jpg" class="imges0" onmouseover="larger(this)" onmouseout="lower(this)"></li>
+				<li><img src="imges/橙子.jpg" class="imges0" onmouseover="larger(this)" onmouseout="lower(this)"></li>
+				<li><img src="imges/胡萝卜.jpg" class="imges0" onmouseover="larger(this)" onmouseout="lower(this)"></li>
+				<li><img src="imges/燕麦 (1).jpg" class="imges0" onmouseover="larger(this)" onmouseout="lower(this)"></li>
+				<li><img src="imges/莴笋.jpg" class="imges0" onmouseover="larger(this)" onmouseout="lower(this)"></li>
+			</ul>
+		</div>
+		<div class="main-word">
+			<div id="main-word1" class="mw">
+				<p>【别名】：虾米、开洋、曲身小子、河虾、草虾、长须公、虎头公。</p>
+				<p>【食量建议】：每次30~50克</p>
+				<p>【适宜人群】：一般人群均可食用</p>
+				<p><span>【禁忌人群】：</span>过敏性皮炎的患者忌食</p>
+			</div>
+			<div id="main-word2" class="mw">
+				<p>【食量建议】：每餐约80克</p>
+				<p>【适宜人群】：一般人群均可食用</p>
+				<p>【禁忌人群】：患皮肤病、肝病、肾病的患者慎食</p>
+			</div>
+			<div id="main-word3" class="mw">
+				<p>【别名】：橙子、金球、香橙、黄橙</p>
+				<p>【食量建议】：每天1~3个</p>
+				<p>【适宜人群】：一般人群均可食用</p>
+				<p>【禁忌人群】：糖尿病患者忌食</p>
+			</div>
+			<div id="main-word4" class="mw">
+				<p>【别名】：胡萝菔、黄萝卜、金笋、丁香萝卜、红芦菔、甘笋、黄根、卜香菜</p>
+				<p>【食量建议】：每餐一根 约70克</p>
+				<p>【适宜人群】：癌症、高血压、夜盲症、皮肤粗糙者适宜</p>
+				<p>【禁忌人群】：一般人群均可食用</p>
+			</div>
+			<div id="main-word5" class="mw">
+				<p>【别名】：燕麦、野麦、雀麦</p>
+				<p>【食量建议】：每餐约40克</p>
+				<p>【适宜人群】：脂肪肝、三高人群适宜</p>
+				<p>【禁忌人群】：肠道敏感人慎食</p>
+			</div>
+			<div id="main-word6" class="mw">
+				<p>【别名】：莴苣、春菜、生笋、千金菜、茎用莴苣、青笋、莴菜、香马笋</p>
+				<p>【食量建议】：每次约60克</p>
+				<p>【适宜人群】：婴儿幼儿、乳母、适宜</p>
+				<p>【禁忌人群】：湿疹、慢性支气管炎、夜盲症忌食</p>
+			</div>
+		</div>
+	</div>
+	<div class="down"></div>
+	<div><img src="imges/小爱心图标.png" id = "follow"></div>
+</body>
+<script type="text/javascript">
+	function getStyle(obj, attr){
+	if(obj.currentStyle){
+		return obj.currentStyle[attr];
+	} else {
+		return getComputedStyle(obj, null)[attr];
+	}
+}
+function animate(obj,json,callback){
+	clearInterval(obj.timer);
+	obj.timer = setInterval(function(){
+		var isStop = true;
+		for(var attr in json){
+			var now = 0;
+			if(attr == 'opacity'){
+				now = parseInt(getStyle(obj,attr)*100);
+			}else{
+				now = parseInt(getStyle(obj,attr));
+			}
+			var speed = (json[attr] - now) / 8;
+			speed = speed>0?Math.ceil(speed):Math.floor(speed);
+			var cur = now + speed;
+			if(attr == 'opacity'){
+				obj.style[attr] = cur / 100;
+			}else{
+				obj.style[attr] = cur + 'px';
+			}
+			if(json[attr] !== cur){
+				isStop = false;
+			}
+		}
+		if(isStop){
+			clearInterval(obj.timer);
+			callback&&callback();
+		}
+	}, 30)
+}
+	var box = document.getElementById("box");
+	var slider = document.getElementById("slider");
+	var left = document.getElementById("left");
+	var right = document.getElementById("right");
+	var nav = document.getElementById("nav").children;
+	var imges0 = document.getElementsByClassName("imges0");
+	var index = 0; 
+	var main_word=document.getElementsByClassName("mw");
+
+	function next(){
+		index++;
+		
+		animate(slider,{left:-1080*index},function(){
+			if(index == 6){
+				slider.style.left="-1080px";
+				index= 1;
+			}
+		});
+	}
+	var timer = setInterval(next,3000);
+	box.onmouseover = function(){
+		animate(left,{opacity:0});
+		animate(right,{opacity:0});
+		clearInterval(timer);
+	}
+
+	box.onmouseout = function(){
+		animate(left,{opacity:50});
+		animate(right,{opacity:50});
+		timer = setInterval(next,3000);
+	}
+	right.onmouseover= function(){
+		clearInterval(timer);
+	}
+	right.onmouseout= function(){
+		timer = setInterval(next,3000);
+	}
+	left.onmouseover= function(){
+		clearInterval(timer);
+	}
+	left.onmouseout= function(){
+		timer = setInterval(next,3000);
+	}
+	right.onclick= next;
+	left.onclick = function(){
+		index--;
+		animate(slider,{left:-1080*index},function(){
+			if(index==0){
+				slider.style.left="-5400px";
+				index = 5;
+			}
+		});
+	}
+	for( var i = 0;i<nav.length ;i++){
+		nav[i].idx = i;
+		nav[i].onclick = function(){
+			index = this.idx+1;
+			animate(slider,{left:-1080*index});
+
+		}
+	}
+
+	function larger(that){
+		that.style.width = "200px";
+		that.style.height = "200px";
+	}
+	function lower(that){
+		that.style.width="150px";
+		that.style.height = "150px";
+	}
+	function b1(ev) {
+    var oEvent = ev || event;
+    var follow = document.getElementById('follow');
+    follow.style.left = oEvent.clientX + 'px';
+    follow.style.top = oEvent.clientY + 'px';
+  }
+	// for(var i = 0;i<imges0.length;i++){
+	// 	imges0[i].indx=i;
+	// 	imges0[i].onmouseover =onover(this.indx,e);
+
+	// 	imges0[i].onmousemove =onmove(this.indx,e);
+ //        imges0[i].onmouseout =onout(this.indx,e);
+	// }
+	// var e = e||window.event;
+	// function onover(idd,e){
+	// 		imges0[idd].mytitle = main_word[idd].innerHTML;
+	// 		var tooltip = document.createElement("div");
+	// 		tooltip.id = "tooltip";
+	// 		tooltip.innerHTML = this.mytitle;
+	// 		tooltip.style.left = e.clientX+10+"px";
+	// 		tooltip.style.right = e.clientY+10+"px";
+	// 		document.body.appendChild(tooltip);
+	// 	}
+	// function onmove(idd,e){
+ //            var e = e||window.event;
+ //            var tooltip = document.getElementById("tooltip");
+ //            tooltip.style.left =  e.clientX+10+"px";
+ //            tooltip.style.top = e.clientY+10+"px";
+ //        }
+ //    function onout(idd,e){
+ //            var tooltip = document.getElementById("tooltip");
+ //            document.body.removeChild(tooltip);
+ //        }
+	
+
+</script>
+</html>
